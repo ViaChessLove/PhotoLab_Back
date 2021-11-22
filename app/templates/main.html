@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'images/PHOTO LAB.png')}}">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="flexboxgrid2.css">
+    <title>Welcome to PhotoLab</title>
+    
+</head>
+<body>
+    <header class = "header">
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="logo">
+                    <a href="{{url_for('main')}}" class="header_logo-link">
+                        <img src="{{url_for('static', filename = 'images/PHOTO LAB.svg')}}" alt="Запечатлите главные моменты своей жизни" class="header_logo-pic">
+                    </a>
+                </div>
+                <nav class="header_nav">
+                    <u1 class="header_list">
+                        <li class="header_item">
+                            <a href=#about_ancor class="header_link">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="header_item">
+                            <a href=#gallery_ancor class="header_link">
+                                Галерея
+                            </a>
+                        </li>
+                        <li class="header_item">
+                            <a href=#prices_ancor  class="header_link">
+                                Цены
+                            </a>
+                        </li>
+                        <li class="header_item">
+                            <a href=#reviews_ancor class="header_link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="header_item">
+                            <input type="checkbox" id="check_menu">
+                            <label class ="burger_label" for="check_menu">
+                                <div class="burger_line first"></div>
+                                <div class="burger_line second"></div>
+                                <div class="burger_line third"></div>
+                                <div class="burger_line fourth"></div>
+                            </label>
+                            <nav class="burger_menu ">
+                                <a class = "header_link burger-link" href=#map_ancor>Как найти?</a>
+                                <a class = "header_link burger-link" href="https://www.instagram.com/" target="_blank">Instagram</a> 
+                            </nav>
+                        </li>
+                    </u1>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="intro">
+            <div class="intro_wrapper">
+                <h1 class="intro_title">Запечатлите главные моменты своей жизни</h1>
+                <h6 class="sub_title">С нашей фото-студией - PhotoLab. </h6>
+                <form method="post" action="/send_email" class="intro_form">
+                    <input type="image" src ="{{url_for('static', filename = 'images/Button.svg')}}" class="intro_button">
+                    <input type="text" name = "email" class="intro_textbox text_intro_" placeholder = "Введите ваш e-mail">
+                    
+                </form>
+            </div>
+        </section>
+        <section class="section_slider">
+            <div id="slider">
+                <input type="radio" name = "slider" id = "slide1" checked>
+                <input type="radio" name = "slider" id = "slide2" >
+                <input type="radio" name = "slider" id = "slide3" >
+                <input type="radio" name = "slider" id = "slide4" >
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="inner">
+                            <div class="slide slide_1">
+                                <div class="slide-content">
+                                    <h2 class = "title">Замечательные фотографии</h2>
+                                    <p class = "description">сделанные нами</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_2">
+                                <div class="slide-content">
+                                    <h2 class = "title">Прекрасные снимки</h2>
+                                    <p class = "description">которые мы смогли запечатлеть</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_3">
+                                <div class="slide-content">
+                                    <h2 class = "title">Обращайтесь к нам за фото</h2>
+                                    <p class = "description">и вы получите произведение искусства</p>
+                                </div>
+                            </div>
+                            <div class="slide slide_4">
+                                <div class="slide-content">
+                                    <h2 class = "title">Будем рады сделать пару снимков</h2>
+                                    <p class = "description">специально для вас</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                </div>
+            </div>
+        </section>
+        <section id = "about_ancor" class="about">
+            <h2 class="title">
+                О нас
+            </h2>
+            <div class = "about_wrapper">
+                <img src="{{url_for('static', filename = 'images/lighthouse.svg')}}" alt="about us" class="lighthouse">
+                <div class = "about_text">
+                    <h3 class ="about_title">
+                        Фотографии любой сложности
+                    </h3>
+                    <span class="about_info">
+                        Сделаем любую фотографию - от свадьбы до вдохновляющих видов вашего родного края. Приемлимые цены и профессионалы своего дела смогут удивить вас и подарить эстетический экстаз от просмотра великолепных фотографий.
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="review_prices">
+            <section  id = "reviews_ancor" class="reviews">
+                <h2 class="title">
+                    Отзывы
+                </h2>
+                <span class="review_text">
+                    Введите отзыв:
+                </span>
+                <form method = "post" action="/add_message" class="review" >
+                    <div class="review_flex">
+                        <input type="text" name = "review_text" class="textbox_review" placeholder = "Введите сюда отзыв">
+                        <button type = "submit" name = "submit" value ="Отправить" class = "review_button">Отправить</button>
+                    </div>
+                </form>
+                <span class="review_text">
+                    Отзывы других пользователей:
+                </span>
+                <span type="text" class="textbox_review_ spanbox_review">
+                    {% for review in reviews %}
+                        {{review.review_text }}&nbsp; {{review.date}}
+                        
+                        <br>
+                    {% endfor %}
+                    
+                </span>
+                
+            </section>
+            <section id = "prices_ancor" class="prices">
+                <h2 class="title">
+                    Цены
+                </h2>
+                <span class="footer_text">
+                    Чтобы узнать цены оставьте заявку или свяжитесь с нами по телефону - 880012332199.
+                </span>
+            </section>   
+        </section>
+        <p></p>
+        <section class="map" id ="map_ancor">
+            <div class="wrapmap">
+                <h2 class="title">
+                    Как найти?
+                </h2>
+                <div class="map_wrapper">
+                    <div class="google_map">
+                        <iframe class = "map_frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9117.189050114046!2d61.3702391!3d55.1605752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa6323404282e1672!2sYuzhno-Ural&#39;skiy%20Gosudarstvennyy%20Universitet%2C%20Zaochnyy%20Inzhenerno-Ekonomicheskiy%20Fakul&#39;tet!5e0!3m2!1sen!2sru!4v1634367150211!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="map_text">
+                        <h2 class = "geoloc_text">
+                            
+                        Наше местоположение: Южно-Уральский 
+                        Государственный Университет.
+                        </h2>
+                        <span class = "map_txt">
+                        Мы открыты с 8:00 до 18:00 каждый день.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = "gallery_ancor" class="gallery">
+            <div class="gallery_wrap">
+                <h2 class="title">
+                    Галерея
+                </h2>
+                <div class="gallery_grid">
+                    <figure class="gallery_item gallery_item_1">
+                        <a href='https://ru.freepik.com/photos/hair'><img src="{{url_for('static', filename = 'images/young_woman.jpg')}}" alt="pic1" class="gallery_img"></a>
+                    </figure>
+                    
+                    <figure class="gallery_item gallery_item_2">
+                        <a href="https://ru.freepik.com/photos/people"><img src="{{url_for('static', filename = 'images/children.jpg')}}" alt="pic2" class="gallery_img"></a>
+                    </figure>
+                    <figure class="gallery_item gallery_item_3">
+                        <img src="{{url_for('static', filename = 'images/legs.jpg')}}" alt="pic3" class="gallery_img">
+                    </figure>
+                    <figure class="gallery_item gallery_item_4">
+                        <img src="{{url_for('static', filename = 'images/sea.jpg')}}" alt="pic4" class="gallery_img">
+                    </figure>
+                    <figure class="gallery_item gallery_item_5">
+                        <img src="{{url_for('static', filename = 'images/cat.svg')}}" alt="pic5" class="gallery_img">
+                    </figure>
+                    <figure class="gallery_item gallery_item_6">
+                        <img src="{{url_for('static', filename = 'images/love.jpg')}}" alt="pic6" class="gallery_img">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <p></p>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer_wrapper">
+                <nav class="footer_left">
+                    <u1 class="socials">
+                        <li class="social_item">
+                            <span class="footer_text">
+                                <a href="/" class = "footer_main_link">подписывайтесь на соц. сети</a>
+                            </span>
+                        </li>
+                        <li class="social_item">
+                            <a href="https://www.youtube.com/" target="_blank" class = "social_item-link">
+                                <img src="{{url_for('static', filename = 'images/youtube.svg')}}" alt="youtube" class="social_item-pic">
+                            </a>
+                        </li>
+                        <li class="social_item">
+                            <a href="https://twitter.com/" target="_blank" class="social_item-link">
+                                <img src="{{url_for('static', filename = 'images/twitter.svg')}}" alt="twitter" class="social_item-pic">
+                            </a>
+                        </li>
+                        <li class="social_item">
+                            <a href="https://ru.wikipedia.org/wiki/Google%2B" target="_blank" class="social_item-link">
+                                <img src="{{url_for('static', filename = 'images/google+.svg')}}" alt="goole+" class="social_item-pic">
+                            </a>
+                        </li>
+                    </u1>
+                </nav>
+                <span class="footer_text">
+                    запись на фото по телефону - 880012332199
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
